@@ -1,5 +1,13 @@
 # NHKProgram
 
+[![Build Status](https://travis-ci.org/mitukiii/nhk_program-for-ruby.png?branch=master)][travis]
+[![Code Climate](https://codeclimate.com/github/mitukiii/nhk_program-for-ruby.png)][codeclimate]
+[![Dependency Status](https://gemnasium.com/mitukiii/nhk_program-for-ruby.png?travis)][gemnasium]
+
+[travis]: https://travis-ci.org/mitukiii/nhk_program-for-ruby
+[codeclimate]: https://codeclimate.com/github/mitukiii/nhk_program-for-ruby
+[gemnasium]: https://gemnasium.com/mitukiii/nhk_program-for-ruby
+
 A Ruby wrapper for the NHK Program API
 
 ## Installation
