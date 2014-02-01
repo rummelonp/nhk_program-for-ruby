@@ -18,6 +18,7 @@ module NHKProgram
       options = default_options.merge(options)
 
       Faraday::Connection.new(endpoint, options) do |builder|
+        builder.response :raise_error
         builder.response :mashify
         builder.response :json
         builder.request :url_encoded
