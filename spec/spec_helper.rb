@@ -26,3 +26,7 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = 'random'
 end
+
+def stub_get(path, endpoint = NHKProgram.endpoint)
+  stub_request(:get, endpoint + '/' + path)
+end
