@@ -28,11 +28,11 @@ describe NHKProgram::Client do
     context 'with class configuration' do
       let(:configuration) do
         {
-          :adapter => :typhoeus,
-          :api_key => 'AK',
-          :endpoint => 'https://api.twitter.com',
-          :proxy => 'http://mitukiii:secret@proxy.example.com:8080',
-          :user_agent => 'Custom User Agent'
+          adapter: :typhoeus,
+          api_key: 'AK',
+          endpoint: 'https://api.twitter.com',
+          proxy: 'http://mitukiii:secret@proxy.example.com:8080',
+          user_agent: 'Custom User Agent'
         }
       end
 

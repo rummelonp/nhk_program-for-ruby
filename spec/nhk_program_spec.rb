@@ -9,7 +9,7 @@ describe NHKProgram do
 
   context 'when delegating to a client' do
     before do
-      stub_get("now/010/g1.json")
+      stub_get('now/010/g1.json')
         .to_return(body: '{"nyan":"にゃーん"}')
     end
 

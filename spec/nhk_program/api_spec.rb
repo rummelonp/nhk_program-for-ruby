@@ -24,7 +24,7 @@ describe NHKProgram::API do
 
   describe '#info' do
     it 'should request the correct resource' do
-      stub_get("info/010/g1/2014010112345.json")
+      stub_get('info/010/g1/2014010112345.json')
         .with(query: {key: api_key})
       client.info('札幌', 'ＮＨＫ総合１', 2014010112345)
     end
@@ -32,7 +32,7 @@ describe NHKProgram::API do
 
   describe '#now' do
     it 'should request the correct resource' do
-      stub_get("now/010/g1.json")
+      stub_get('now/010/g1.json')
         .with(query: {key: api_key})
       client.now('札幌', 'ＮＨＫ総合１')
     end
