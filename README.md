@@ -26,7 +26,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+client = NHKProgram.new(api_key: 'YOUR_API_KEY')
+
+# Ger tomorrow program list
+list = client.list('130', 'g1', Date.today + 1)
+# another way
+# list = client.list('東京', 'ＮＨＫ総合１', :tomorrow)
+
+# Get tomorrow program list of specify genre
+genre = client.genre('130', 'g1', '0700', Date.today + 1)
+# another way
+# genre = client.genre('東京', 'ＮＨＫ総合１', 'アニメ／特撮(国内アニメ)', :tomorrow)
+```
 
 ## Contributing
 
