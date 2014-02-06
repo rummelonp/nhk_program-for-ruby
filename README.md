@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ## Usage
 
-```
+```ruby
 client = NHKProgram.new(api_key: 'YOUR_API_KEY')
 
 # Get program list
