@@ -26,18 +26,39 @@ Or install it yourself as:
 
 ## Usage
 
-```ruby
+```
 client = NHKProgram.new(api_key: 'YOUR_API_KEY')
 
-# Ger tomorrow program list
-list = client.list('130', 'g1', Date.today + 1)
+# Get program list
+data = client.list('130', 'g1', Date.today + 1)
 # another way
-# list = client.list('東京', 'ＮＨＫ総合１', :tomorrow)
+# data = client.list('東京', 'ＮＨＫ総合１', :tomorrow)
+data.list.g1.each do |program|
+  # do something...
+end
 
-# Get tomorrow program list of specify genre
-genre = client.genre('130', 'g1', '0700', Date.today + 1)
+# Get tomorrow program list of genre
+data = client.genre('130', 'g1', '0700', Date.today + 1)
 # another way
-# genre = client.genre('東京', 'ＮＨＫ総合１', 'アニメ／特撮(国内アニメ)', :tomorrow)
+# data = client.genre('東京', 'ＮＨＫ総合１', 'アニメ／特撮(国内アニメ)', :tomorrow)
+data.list.g1.each do |program|
+  # do something...
+end
+
+# Get program information
+data = client.info('130', 'e1', '2014020700918')
+# another way
+# data = client.info('東京', 'ＮＨＫＥテレ１', '2014020700918')
+program = data.list.e1.first
+# do something...
+
+# Get information of program that is on air now
+data = client.now('130', 'g1')
+# another way
+# data = client.now('東京', 'ＮＨＫ総合１')
+data.nowonair_list.g1.following.each do |program|
+  # do something...
+end
 ```
 
 ## Contributing
