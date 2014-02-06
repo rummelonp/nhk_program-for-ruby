@@ -33,7 +33,7 @@ module NHKProgram
     define '210', '岐阜'
     define '220', '静岡'
     define '230', '名古屋'
-    define '240', '津2'
+    define '240', '津'
     define '250', '大津'
     define '260', '京都'
     define '270', '大阪'
