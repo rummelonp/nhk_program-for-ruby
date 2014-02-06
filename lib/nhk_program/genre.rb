@@ -4,6 +4,12 @@ require 'nhk_program/enumeration'
 
 module NHKProgram
   class Genre < Enumeration
+    # @attribute [r] id
+    # @return [String] Genre ID (4 bytes)
+
+    # @attribute [r] name
+    # @return [String] Genre name
+
     define '0000', 'ニュース／報道(定時・総合)'
     define '0100', 'スポーツ(スポーツニュース)'
     define '0205', '情報／ワイドショー(グルメ・料理)'

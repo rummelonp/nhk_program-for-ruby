@@ -4,7 +4,9 @@ require 'faraday'
 require 'nhk_program/error'
 
 module NHKProgram
+  # @private
   module Response
+    # @private
     class RaiseError < Faraday::Response::Middleware
       def on_complete(env)
         case env[:status].to_i

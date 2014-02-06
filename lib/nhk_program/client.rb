@@ -7,6 +7,9 @@ require 'nhk_program/helper'
 require 'nhk_program/request'
 
 module NHKProgram
+  # Wrapper for the NHK Program REST API
+  #
+  # @see http://api-portal.nhk.or.jp/ja
   class Client
     include Connection
     include Request

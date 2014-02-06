@@ -4,6 +4,12 @@ require 'nhk_program/enumeration'
 
 module NHKProgram
   class Area < Enumeration
+    # @attribute [r] id
+    # @return [String] Area ID (3 bytes)
+
+    # @attribute [r] name
+    # @return [String] Area name
+
     define '010', '札幌'
     define '011', '函館'
     define '012', '旭川'

@@ -6,6 +6,7 @@ require 'nhk_program/response'
 
 module NHKProgram
   module Connection
+    # @return [Faraday::Connection]
     def connection(options = {})
       default_options = {
         headers: {

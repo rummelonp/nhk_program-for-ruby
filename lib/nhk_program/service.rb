@@ -4,6 +4,12 @@ require 'nhk_program/enumeration'
 
 module NHKProgram
   class Service < Enumeration
+    # @attribute [r] id
+    # @return [String] Service ID (2 bytes)
+
+    # @attribute [r] name
+    # @return [String] Service name
+
     define 'g1', 'ＮＨＫ総合１'
     define 'g2', 'ＮＨＫ総合２'
     define 'e1', 'ＮＨＫＥテレ１'

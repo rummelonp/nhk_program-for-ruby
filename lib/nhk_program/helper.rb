@@ -8,24 +8,32 @@ require 'nhk_program/service'
 
 module NHKProgram
   module Helper
+    # @return [Area]
+    # @raise [Error]
     def parse_area(area)
       Area.find_by_id(area) or
         Area.find_by_name(area) or
-        raise NHKProgram::Error, 'Area not found'
+        raise Error, 'Area not found'
     end
 
+    # @return [Service]
+    # @raise [Error]
     def parse_service(service)
       Service.find_by_id(service) or
         Service.find_by_name(service) or
-        raise NHKProgram::Error, 'Service not found'
+        raise Error, 'Service not found'
     end
 
+    # @return [Genre]
+    # @raise [Error]
     def parse_genre(genre)
       Genre.find_by_id(genre) or
         Genre.find_by_name(genre) or
-        raise NHKProgram::Error, 'Genre not found'
+        raise Error, 'Genre not found'
     end
 
+    # @return [Date]
+    # @raise [Error]
     def parse_date(date)
       case date
       when Date
