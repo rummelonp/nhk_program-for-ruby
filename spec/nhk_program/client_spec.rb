@@ -65,6 +65,7 @@ describe NHKProgram::Client do
     {
       400 => NHKProgram::BadRequest,
       401 => NHKProgram::NotAuthorized,
+      403 => NHKProgram::Forbidden,
       404 => NHKProgram::NotFound,
       499 => NHKProgram::ClientError,
       500 => NHKProgram::InternalServerError,
@@ -73,8 +74,14 @@ describe NHKProgram::Client do
     }.each do |status, klass|
       context "when HTTP status is #{status}" do
         before do
-          stub_get('now/010/g1.json')
-            .to_return(status: status, body: '{"error":{"message":"nyan"}}')
+          case status
+          when 400...500
+            stub_get('now/010/g1.json')
+              .to_return(status: status, body: '{"error":{"message":"nyan"}}')
+          when 500...600
+            stub_get('now/010/g1.json')
+              .to_return(status: status, body: '{"fault":{"faultstring":"nyan"}}')
+          end
         end
 
         it "should raise #{klass.name} error" do
