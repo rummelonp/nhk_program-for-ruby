@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Kazuya Takeshima']
   spec.email         = ['mail@mitukiii.jp']
   spec.summary       = %q{A Ruby wrapper for the NHK Program API}
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/mitukiii/nhk_program-for-ruby'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
